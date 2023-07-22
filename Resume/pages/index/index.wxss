@@ -1,0 +1,152 @@
+/* 音乐播放图标 */
+.player {
+    position: fixed;
+    top: 20rpx;
+    right: 20rpx;
+    /* 提高堆叠顺序 */
+    z-index: 1;
+}
+.player>image:first-child {
+    width: 80rpx;
+    height: 80rpx;
+    /* 为唱片图标设置旋转动画 */
+    animation: musicRotate 3s linear infinite;
+}
+
+@keyframes musicRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.player>image:last-child {
+    width: 28rpx;
+    height: 80rpx;
+    margin-left: -5px;
+}
+
+/* 播放状态 class为.player-play */
+.player-play>image:first-child {
+    animation-play-state: running;
+}
+.player-play>image:last-child {
+    animation: musicStart 0.2s linear forwards;
+}
+/* 暂停状态 class为.player-pause */
+.player-pause>image:first-child {
+    animation-play-state: paused;
+}
+.player-pause>image:last-child {
+    animation: musicStop 0.2s linear forwards;
+}
+@keyframes musicStart {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(20deg);
+    }
+}
+@keyframes musicStop {
+    from {
+        transform: rotate(20deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+/* 背景图 */
+.bg {
+    width: 100vw;
+    height: 100vh;
+}
+/* 内容区域 */
+.content {
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* 标题 */
+.title {
+    font-size: 6vh;
+    color: rgb(14, 13, 13);
+    text-align: center;
+    margin-top: 20px;
+    font-family: "华文行楷", "楷体";
+}
+.job {
+    margin-top: 40px;
+}
+.job text {
+    color: black;
+    font-weight: bold;
+    margin-left: 10px;
+    text-transform: uppercase;
+    font-size: 36px;
+    /* font-family: "方正舒体", "楷体"; */
+    font-style: italic;
+    animation: change 5s forwards infinite;
+    /* transform: translateX(-100vw) scale(0); */
+    /* filter: opacity(0); */
+    animation-delay: calc(0.1s * var(--n));
+}
+@keyframes change {
+    0% {
+      color: #000000;
+      filter: hue-rotate(0deg);
+      text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
+        0 0 80px red, 0 0 120px red, 0 0 200px red, 0 0 300px red;
+    }
+    25%,
+    75% {
+      color: #fff;
+      filter: hue-rotate(360deg);
+      text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
+        0 0 80px #00b3ff, 0 0 120px #00b3ff, 0 0 200px #00b3ff;
+    }
+    50% {
+        color: #000000;
+        filter: hue-rotate(0deg);
+        text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
+          0 0 80px red, 0 0 120px red, 0 0 200px red, 0 0 300px red;
+      }
+    100% {
+      color: #000000;
+      box-shadow: none;
+      filter: hue-rotate(0deg);
+    }
+  }
+.job text:nth-child(1) {
+    --n: 1;
+}
+.job text:nth-child(2) {
+    --n: 2;
+}
+.job text:nth-child(3) {
+    --n: 3;
+}
+.job text:nth-child(4) {
+    --n: 4;
+}
+.job text:nth-child(5) {
+    --n: 5;
+}
+.content_box{
+    margin-top: 20px;
+    width: 80vw;
+    height: min-content;
+    padding: 10px;
+    background-color: rgba(255, 255, 255,0.6);
+    border-radius: 7px;
+}
+.box_title{
+    font-size: 24px;
+    font-weight: bold;
+}
+.box_text{
+    font-size: 18px;
+}

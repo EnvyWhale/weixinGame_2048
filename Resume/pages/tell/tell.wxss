@@ -1,0 +1,52 @@
+.bg {
+    width: 100vw;
+    height: 100vh;
+}
+
+.top {
+    position: fixed;
+    width: 90vw;
+    left: 5vw;
+    top: 9vw;
+
+    text-align: center;
+    font-size: 60px;
+    font-style: italic;
+    font-weight: bold;
+    color: transparent;
+    /* text-stroke: 2px #3E4676; */
+    -webkit-text-stroke: 2px #262726;
+    font-family: "华文行楷";
+}
+
+.content {
+    width: 80vw;
+    position: fixed;
+    left: 10vw;
+    bottom: 12vh;
+}
+
+.content>view {
+    font-size: 14px;
+    border: 1rpx dashed #262726;
+    border-radius: 10rpx;
+    padding: 1.5vh 40rpx;
+    margin-bottom: 4vh;
+    color: #262726;
+}
+
+.content button {
+    font-size: 3vh;
+    height: 7.5vh;
+    line-height: 7.5vh;
+    background: #26c220;
+    color: #fff;
+}
+
+.content picker {
+    padding: 0.7vh 0;
+}
+
+.content .phcolor {
+    color: #262726;
+}

@@ -1,0 +1,23 @@
+<view id="player" class="player player-{{isPlayingMusic ? 'play' : 'pause'}}" bindtap="play">
+    <image src="/images/music_icon.png" />
+    <image src="/images/music_play.png" />
+</view>
+<!-- 背景图片 -->
+<image class="bg" src="/images/背景.jpg" />
+<!-- 内容区域 -->
+<view class="content">
+    <view class="title">意向岗位</view>
+    <view class="job">
+        <text>新</text>
+        <text>媒</text>
+        <text>体</text>
+        <text>运</text>
+        <text>营</text>
+    </view>
+    <view class="content_box">  
+        <text class="box_title">职位简介：</text>
+        <view>
+        <text class="box_text" decode="true">&ensp;&ensp;&ensp;&ensp;新媒体运营，是通过现代化移动互联网手段，通过利用抖音、快手、微信、微博、贴吧等新兴媒体平台工具进行产品宣传、推广、产品营销的一系列运营手段。通过策划品牌相关的优质、高度传播性的内容和线上活动，向客户广泛或者精准推送消息，提高参与度，提高知名度，从而充分利用粉丝经济，达到相应营销目的。</text>
+        </view> 
+    </view>
+</view>
